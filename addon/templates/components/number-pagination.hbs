@@ -15,11 +15,6 @@
     <div class="data-table-pagination-right">
       <button {{action "changePage" links.first}} disabled={{isFirstPage}}>First</button>
       <button {{action "changePage" links.prev}} disabled={{isFirstPage}}>Previous</button>
-      <select onchange={{action (mut currentPage) value="target.value"}}>
-        {{#each pageOptions as |sizeOption|}}
-          <option value={{sizeOption}} selected={{eq currentPage sizeOption}}>{{sizeOption}}</option>
-        {{/each}}
-      </select>
       <button {{action "changePage" links.next}} disabled={{isLastPage}}>Next</button>
       <button {{action "changePage" links.last}} disabled={{isLastPage}}>Last</button>
     </div>
