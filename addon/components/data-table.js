@@ -28,7 +28,7 @@ export default Component.extend({
     if (!this.get('enableSizes')) {
       return null;
     } else {
-      const sizeOptions = this.get('sizes') || [5, 10, 25, 50, 100];
+      const sizeOptions = this.get('sizes') || [10, 14, 25, 50, 100];
       if (!sizeOptions.includes(this.get('size'))) {
         sizeOptions.push(this.get('size'));
       }
